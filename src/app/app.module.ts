@@ -1,16 +1,28 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { HttpClientModule } from '@angular/common/http';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+import { ServiciosComponent } from './servicios/servicios.component';
+import { ProductosComponent } from './productos/productos.component';
+import { AcercadeComponent } from './acercade/acercade.component';
+import { Pagina404Component } from './pagina404/pagina404.component';
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ServiciosComponent,
+    ProductosComponent,
+    AcercadeComponent,
+    Pagina404Component
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

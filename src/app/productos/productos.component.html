@@ -1,0 +1,28 @@
+<h1>
+	Productos
+</h1>
+<br>
+<table *ngIf="productos != null else cargando">
+	<thead>
+		<tr>
+			<th>Codigo</th>
+			<th>Descripcion</th>
+			<th>Precio</th>
+		</tr>
+	</thead>
+
+
+	<tbody>
+		<tr *ngFor="let producto of productos">
+			<td>{{ producto.codigo }}</td>
+			<td>{{ producto.descripcion }}</td>
+			<td>{{ producto.precio }}</td>
+		</tr>
+	</tbody>
+</table>
+
+<div>
+	<ng-template #cargando>
+		Esperando datos
+	</ng-template>
+</div>
