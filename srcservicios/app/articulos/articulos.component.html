@@ -1,0 +1,33 @@
+<h1>
+	Articulos
+</h1>
+<br>
+
+<table *ngIf="articulos != null else cargando" class="table">
+	<thead>
+		<tr>
+			<th>Codigo</th>
+			<th>Descripcion</th>
+			<th>Precio</th>
+			<th>Imagen</th>
+		</tr>
+	</thead>
+
+	<tbody>
+		<tr *ngFor="let articulo of articulos">
+			<td>{{ articulo.codigo }}</td>
+			<td>{{ articulo.descripcion }}</td>
+			<td>{{ articulo.precio }}</td>
+			<td>
+				<img src="{{ articulo.imagen }}">
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<div>
+	<ng-template #cargando>
+		Esperando datos
+	</ng-template>
+</div>
+
